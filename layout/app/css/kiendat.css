@@ -1,0 +1,275 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+
+/*
+Template Name: kiendat
+Version: 1.0
+Author: chauhuynh
+Author URL: chaucdth10a@gmail.com
+*/
+/*************************
+*******kiendat******
+**************************/
+
+body {
+  font-family: 'Times New Roman', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  font-family: 'Times New Roman', sans-serif;
+  color: #272727;
+}
+.navbar-default .navbar-nav>li>a {
+	color: #506a85;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.section-header .section-title {
+	color: #506a85;
+	font-size: 44px;
+	text-transform: uppercase;
+}
+
+.section-header .section-title:before {
+	background: none;
+}
+
+.section-header .section-title:after {
+	background: none;
+	border: none;
+}
+
+.short-intro {
+	color: #73879c;
+	font-size: 24px;
+}
+
+.divider {
+	background-image: none;
+}
+
+/* ---------------------------------------- header --------------------------------------*/
+
+.top-header {
+	background: #f5f7fa;
+	padding: 6px 0px;
+	border-bottom: 1px solid #e6e9ed;
+}
+
+.top-header .top-header-item {
+	margin: 0px;
+}
+.top-header .top-header-item li {
+	display: inline-block;
+	list-style: none;
+	color: #506a85;
+	font-size: 12px;
+	font-family: 'Times new roman' ,sans-serif;
+	padding: 0px 17px 0px 0px;
+}
+
+.top-header .top-header-item li span{
+	margin-left: 10px;
+}
+
+.top-header .social-icon {
+	text-align: right;
+}
+
+.main-menu {
+	background: #fff;
+}
+
+/* ----------------------------------------services --------------------------------------*/
+
+.media.service-box .pull-left > i {
+	color: #00bc9c;
+	border: none;
+	box-shadow: none;
+	font-size: 4em;
+}
+
+.media.service-box .pull-left > i:after {
+	background: none;
+	border: none;
+}
+
+.media.service-box .media-heading {
+	color: #506a85;
+	font-size: 26px;
+	font-family: 'Lato', sans-serif;
+}
+
+.media.service-box p {
+	color: #506a85;
+	font-size: 16px;
+}
+
+/* ---------------------------------------- project --------------------------------------*/
+
+#project {
+	padding-top: 75px;
+	background: #f2f5f7;
+}
+
+.project-item {
+	background: #fff;
+    padding: 0px 0px 30px 0px;
+    border: 1px solid #eaedf0;
+}
+
+.project-info {
+	text-align: center;
+}
+
+.project-info h3 {
+	color: #506a85;
+	font-size: 20px;
+	font-weight: 400;
+}
+
+.project-info span {
+	color: #73879c;
+	font-size: 14px;
+}
+
+
+/* ---------------------------------------- lasted-posts --------------------------------------*/
+
+#lastest-posts {
+	background: #f2f5f7;
+	padding: 100px 0px;
+}
+
+.lastest-posts-item {
+	background: #fff;
+	border: 1px solid #eaedf0;
+}
+
+.lastest-posts-info {
+	padding: 15px 30px 25px 30px;
+}
+
+.lastest-posts-info h3 {
+	color: #000;
+	font-size: 30px;
+	font-weight: normal;
+	text-align: center;
+}
+.lastest-posts-info p {
+	color: #000;
+	font-size: 20px;
+	text-align: left;
+}
+
+.lastest-posts-info a {
+	text-align: right;
+	width: 100%;
+	display: inline-block;
+	font-size: 24px;
+	color: #00dffc;
+	text-decoration: underline;
+	font-family: 'Myriad Pro';
+	font-weight: normal;
+}
+
+.lastest-posts-img {
+	position: relative;
+}
+.lastest-posts-img span{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	position: absolute;
+	top: 0px;
+}
+
+
+/* ----------------------------- About us ------------------------------- */
+#contact .container-wrapper {
+	background: rgba(0,0,0, 0.5);
+}
+
+#contact .contact-form {
+	background: none;
+}
+
+#main-contact-form .form-control {
+	border-radius: 0px;
+	border: 1px solid #000000;
+	color: #000;
+}
+
+#main-contact-form .form-control::-webkit-input-placeholder {
+   color: 000;
+}
+
+#main-contact-form .form-control:-moz-placeholder { /* Firefox 18- */
+   color: 000;  
+}
+
+#main-contact-form .form-control::-moz-placeholder {  /* Firefox 19+ */
+   color: 000;  
+}
+
+#main-contact-form .form-control:-ms-input-placeholder {  
+   color: 000;  
+}
+
+.btn-send-message {
+	color: #000;
+	font-size: 14px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	background-color: #e4e4e3 !important;
+	border: none !important;
+}
+
+.btn-send-message:hover {
+	text-decoration: underline;
+	color: #000;
+}
+
+
+#contact address {
+	color: #fff;
+	margin-top: 70px;
+	font-size: 18px;
+}
+
+
+/* ----------------------------- footer ------------------------------- */
+
+#footer {
+	background: #283645;
+	padding-top: 18px;
+	padding-bottom: 10px;
+}
+
+#footer span {
+	font-family: 'Times New Roman' , sans-serif;
+	color: #707e8c;
+	font-size: 13px;
+}
+
+#footer .menu-footer li a {
+	font-family: 'Times New Roman' , sans-serif;
+	font-size: 13px;
+	color: #707e8c;
+	text-transform: capitalize;
+}
+
+
+#footer .social-icons .fa-twitter-square {
+	color: #62aadc;
+}
+
+#footer .social-icons .fa-facebook-square {
+	color: #4964a1;
+}
