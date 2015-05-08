@@ -1,98 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Responsive Onepage HTML Template | Multi</title>
-	<!-- core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/owl.carousel.css" rel="stylesheet">
-    <link href="css/owl.transitions.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/vertical-timeline.css" rel="stylesheet" >
-    <link href="css/kiendat.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
- 
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->       
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
-</head><!--/head-->
+<?php
+/**
+ * The main template file
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * e.g., it puts together the home page when no home.php file exists.
+ *
+ * Learn more: {@link https://codex.wordpress.org/Template_Hierarchy}
+ *
+ * @package WordPress
+ * @subpackage kiendat
+ * @since kiendat
+ */
 
-<body id="home" class="homepage">
-
-    <header id="header">
-
-        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
-            <div class="top-header">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <ul class="top-header-item">
-                                <li><i class="fa fa-envelope-o"></i><span>info@kiendat.com</span></li>
-                                <li><i class="fa fa-mobile"></i><span>+84  938 690 249</span></li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-5 social-icon">
-                            <ul class="top-header-item">
-                                <li><i class="fa fa-facebook"></i></li>
-                                <li><i class="fa fa-google-plus"></i></li>
-                                <li><i class="fa fa-twitter"></i></li>
-                            </ul>
-                        </div>
-                   <!--  <div class="col-sm-1">
-                        <ul class="top-header-item">
-                            <li><i class="fa fa-facebook"></i></li>
-                            <li><i class="fa fa-google-plus"></i></li>
-                            <li><i class="fa fa-twitter"></i></li>
-                        </ul>
-                    </div> -->
-                    </div>
-                </div>
-            </div>
-            <div class="main-menu">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
-                    </div>
-    				
-                    <div class="collapse navbar-collapse navbar-right">
-                        <ul class="nav navbar-nav">
-                            <li class="scroll"><a href="#services">services</a></li>
-                            <li class="scroll"><a href="#portfolio">Project</a></li>
-                            <li class="scroll"><a href="#about">About us</a></li>
-                            <li class="scroll"><a href="#lastest-posts">lastest post</a></li> 
-                            <li class="scroll"><a href="#get-in-touch">Contact</a></li>                        
-                        </ul>
-                    </div>
-                </div><!--/.container-->
-            </div>
-        </nav><!--/nav-->
-    </header><!--/header-->
-
-
+get_header(); ?>
     <section id="cta2">
         <div class="container">
             <div class="text-center">
                 <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms"><span>MULTI</span> IS A CREATIVE HTML TEMPLATE</h2>
                 <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">Mauris pretium auctor quam. Vestibulum et nunc id nisi fringilla <br />iaculis. Mauris pretium auctor quam.</p>
-                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms"><a class="btn btn-primary btn-lg" href="#">Free Download</a></p>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms"><a class="btn btn-primary btn-lg" href="#">Get started now</a></p>
                 <img class="img-responsive wow fadeIn" src="images/cta2/cta2-img.png" alt="" data-wow-duration="300ms" data-wow-delay="300ms">
             </div>
         </div>
@@ -199,7 +127,7 @@
     </section><!--/#project-->
 
 
-    <section id="about">
+    <?php /* <section id="about">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title text-center wow fadeInDown">About Us</h2>
@@ -217,7 +145,6 @@
                         <h2 class="school-name">Cao đẳng kỹ thuật cao thắng</h2>
                         <p class="brand">Công nghệ thông tin</p>
                         <p class="info">Học ngu chết mẹ, mém rớt, ra trường là một may mắn lớn!</p>
-                        <!-- <span class="cd-date">2011 - 2014</span> -->
                       </div> <!-- cd-timeline-content -->
                     </div> <!-- cd-timeline-block -->
 
@@ -230,7 +157,6 @@
                         <h2 class="school-name">Đại học Ăn Nhậu</h2>
                         <p class="brand">Nhà báo</p>
                         <p class="info">Thủ khoa ngành báo đời, còn sống đến bây giờ là một hạnh phúc!</p>
-                        <!-- <span class="cd-date">2014 - 2015</span> -->
                       </div> <!-- cd-timeline-content -->
                     </div> <!-- cd-timeline-block -->
 
@@ -243,7 +169,6 @@
                         <h2 class="school-name">Đại học trộm chó</h2>
                         <p class="brand">Á khoa ngành trộm chó chuyên nghiệp</p>
                         <p class="info">Trộm chó và bị bắt, bị đánh gần chết, còn sống đến 2016 phải nói là kỳ tích. Công nhận thịt chó ngon!</p>
-                        <!-- <span class="cd-date">2015 - 2016</span> -->
                       </div> <!-- cd-timeline-content -->
                     </div> <!-- cd-timeline-block -->
 
@@ -256,7 +181,6 @@
                         <h2 class="school-name">Đại học Cambridge</h2>
                         <p class="brand">Công nghệ thông tin</p>
                         <p class="info">Sau trận đánh vì ăn trộm chó, đã thay đổi và hoàn lương, tốt nghiệp thủ khoa ngành công nghệ thông tin đại học Cambridge.!</p>
-                        <!-- <span class="cd-date">2016 - 2017</span> -->
                       </div> <!-- cd-timeline-content -->
                     </div> <!-- cd-timeline-block -->
                   </section> <!-- cd-timeline -->
@@ -264,7 +188,7 @@
                 </div>
             </div><!--/row-->
         </div><!--/about-->
-    </section><!--/#about-->
+    </section><!--/#about--> */ ?>
 
     <section id="lastest-posts">
         <div class="container">
@@ -314,6 +238,7 @@
                     </div>
                 </div><!--/col-md-4-->
             </div>
+            <div class="view-all"><a href="">view all</a></div>
     </section><!--/#lastest-posts-->
 
 
@@ -360,44 +285,4 @@
         </div>
     </section><!--/#contact-->
 
-    <footer id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    &copy; 2015 KIENDAT. All rights reserved.
-                </div>
-                <div class="col-sm-4">
-                    <ul class="menu-footer">
-                        <li class="scroll"><a href="#services">services</a></li>
-                        <li class="scroll"><a href="#portfolio">Project</a></li>
-                        <li class="scroll"><a href="#about">About us</a></li>
-                        <li class="scroll"><a href="#blog">lastest post</a></li> 
-                        <li class="scroll"><a href="#get-in-touch">Contact</a></li>  
-                    </ul>
-                </div>
-                <div class="col-sm-2">
-                    <ul class="social-icons">
-                        <li><a href="#"><i class="fa fa-twitter-square fa-3x"></i></a></li>
-                        <li><a href="#"><i class="fa fa-facebook-square fa-3x"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer><!--/#footer-->
-
-    <div id="go-to-top" style="display: block;"><i class="fa fa-angle-up"></i></div>
-
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/mousescroll.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/jquery.inview.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/kiendat.js"></script>
-</body>
-</html>
+<?php get_footer(); ?>

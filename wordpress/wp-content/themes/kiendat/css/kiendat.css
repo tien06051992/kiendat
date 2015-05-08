@@ -89,27 +89,7 @@ h6 {
 	background: #fff;
 }
 
-
-/*----------------------------------------- cta ------------------------------------------*/
-
-#cta2 h2 {
-	font-size: 48px;
-	font-family: 'Lato', sans-serif;
-}
-
-#cta2 p {
-	font-family: 'Lato';
-}
-
-#cta2 .btn {
-	background: #00bc9c !important;
-	border-color: #00a085;
-	width: 295px;
-	text-transform: uppercase;
-	font-family: 'Time new roman';
-}
-
-/* ---------------------------------------- services --------------------------------------*/
+/* ----------------------------------------services --------------------------------------*/
 
 .media.service-box .pull-left > i {
 	color: #00bc9c;
@@ -219,18 +199,6 @@ h6 {
 	top: 0px;
 }
 
-.view-all a{
-	display: block;
-	width: 295px;
-	margin: 50px auto 0px auto;
-	color: #fff;
-	background: #00bc9c;
-	text-align: center;
-	padding: 15px;
-	font-size: 18px;
-	text-transform: uppercase;
-	font-weight: bold;
-}
 
 /*------------------------------ about us ---------------------------------*/
 #cd-timeline::before {
@@ -339,8 +307,9 @@ h6 {
 #go-to-top {
     display: none;
     position: fixed;
-    width: 40px;
+    width: 35px;
     height: 35px;
+    font-size: 16px;
     line-height: 40px;
     text-align: center;
     color: #fff;
@@ -349,19 +318,8 @@ h6 {
     right: 15px;
     bottom: 15px;
     cursor: pointer;
-    background: #3c5065;
-    color: #949ba2;
-    border-radius: 4px;
+    background: url('../img/btn-go-top.png') no-repeat;
 }
-
-#go-to-top i {
-	font-size: 24px;
-}
-
 #go-to-top:hover {
-	background: #62aadc;
-}
-
-#go-to-top:hover i {
-	color: #fff;
+	background: url('../img/btn-go-top-hover.png') no-repeat;
 }
