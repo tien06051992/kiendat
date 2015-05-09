@@ -45,7 +45,7 @@ get_header(); ?>
                     <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
                         <div class="media service-box">
                             <div class="pull-left">
-                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-lightbulb-o fa-6x"></i>
                             </div>
                             <?php echo get_field('service_2', 15); ?>
                         </div>
