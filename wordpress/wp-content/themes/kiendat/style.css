@@ -12,6 +12,7 @@ Author URL: chaucdth10a@gmail.com
 
 body {
   font-family: 'Times New Roman', sans-serif;
+  padding-top: 15px;
 }
 h1,
 h2,
@@ -548,14 +549,15 @@ h6 {
 }
 
 
-/* ----------------------------- signle ------------------------------- */
+/* ----------------------------- single ------------------------------- */
 
 #single {
-	padding: 15px 0px 100px 0px;
+	padding: 45px 0px 100px 0px;
 	min-height: 466px;
 }
 #single h2 {
 	font-size: 50px;
+	margin-top: 0px;
 }
 
 
@@ -579,7 +581,7 @@ h6 {
 /* ----------------------------- category ------------------------------- */
 
 #category {
-	padding: 15px 0px 100px 0px;
+	padding: 45px 0px 100px 0px;
 }
 
 #category .img-thumbnail img {
@@ -597,9 +599,15 @@ h6 {
 #category .post-item a:hover h2 {
 	color: #506a85;
 }
-/* ----------------------------- bredcrumb ------------------------------- */
+
+.img-post-item img {
+	max-width: 100%;
+	height: auto;
+}
 .bredcrumb {
 	margin-bottom: 15px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #506a85;
 }
 .bredcrumb a {
 	font-size: 30px;
@@ -610,4 +618,30 @@ h6 {
 .bredcrumb span {
 	color: #506a85;
 	font-size: 30px;
+}
+
+/* ----------------------------- side-bar ------------------------------- */
+.side-bar {
+	margin-bottom: 15px;
+}
+.side-bar ul {
+	list-style: none;
+	padding: 0px;
+}
+.side-bar ul li {
+	margin-bottom: 15px;
+	border-bottom: 1px solid #ebebeb;
+	padding-bottom: 15px;
+	display: inline-block;
+}
+.side-bar h4.title {
+	margin-top: 0px;
+}
+
+.side-bar a.wpp-post-title {
+	color: #000;
+}
+
+.side-bar a.wpp-post-title:hover {
+	color: #506a85;
 }
