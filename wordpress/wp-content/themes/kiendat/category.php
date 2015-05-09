@@ -1,21 +1,24 @@
 <?php
-get_header();
+get_header( 'second' );
 $cat = get_query_var('cat');
 $yourcat = get_category($cat);
 ?>
     <!--main-->
   <section id="category">
-    <div class="row">
-      <div class="col-sm-8 col-sm-offset-2">
-      <div class="bredcrumb">
-        <a href="<?php bloginfo('url'); ?>" class="index-breadcrumb">Home > </a><span><?php echo $yourcat->name; ?></span>
-      </div>
-      </div>
-      <div class="col-sm-12 col-sm-offset-2">
-        <div class="main-content">
-          <!--left-content-->
-          <div class="col-md-8">
-            <div class="title">The Best Of Travel</div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <div class="bredcrumb">
+            <?php if(qtrans_getLanguage() == "vi") : ?>
+              <a href="<?php bloginfo('url'); ?>" class="index-breadcrumb">Trang chủ > </a><span><?php echo $yourcat->name; ?></span>
+            <?php endif ?>
+            <?php if(qtrans_getLanguage() == "en") : ?>
+               <a href="<?php bloginfo('url'); ?>" class="index-breadcrumb">Home > </a><span><?php echo $yourcat->name; ?></span>
+            <?php endif ?>
+          </div><!--/bredcrumb-->
+        </div><!--/col-sm-8 col-sm-offset-2-->
+
+        <div class="col-sm-8 col-sm-offset-2">
             <?php while (have_posts()) : the_post();?>
                 <div class="post-item">
                   <div class="row">
@@ -29,17 +32,12 @@ $yourcat = get_category($cat);
                     </div>
                 </div>
             <?php endwhile; ?>
-           <div class="col-md-12 paging-travel">
-           <?php wp_pagenavi(); ?>
-           </div>
-          </div>
-          <!--/left-content-->
-          <!--right-content-->
-         <?php get_sidebar(); ?>
-          <!--/right-content-->
+        </div><!--/col-sm-12 col-sm-offset-2-->
+        <div class="col-sm-8 col-sm-offset-2">
+          <?php wp_pagenavi(); ?>
         </div>
-      </div>
-    </div>
+      </div><!--/row-->
+    </div><!--container-->
   </section>
     
 <?php get_footer(); ?>

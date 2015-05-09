@@ -1,19 +1,28 @@
 <footer id="footer">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 copy-right">
+                <div class="col-md-6 col-sm-12 copy-right">
                     &copy; 2015 KIENDAT. All rights reserved.
                 </div>
-                <div class="col-sm-4 menu-footer">
+                <div class="col-md-4 col-sm-12 menu-footer">
                     <ul>
+                        <?php if(qtrans_getLanguage() == "vi") : ?>
+                        <li class="scroll"><a href="#services">Dịch vụ</a></li>
+                        <li class="scroll"><a href="#project">dự án</a></li>
+                        <li class="scroll"><a href="#about">giới thiệu</a></li>
+                        <li class="scroll"><a href="#lastest-posts">bài viết gần đây</a></li> 
+                        <li class="scroll"><a href="#contact">liên hệ</a></li>  
+                        <?php endif ?>
+                        <?php if(qtrans_getLanguage() == "en") : ?>
                         <li class="scroll"><a href="#services">services</a></li>
-                        <li class="scroll"><a href="#portfolio">Project</a></li>
+                        <li class="scroll"><a href="#project">Project</a></li>
                         <li class="scroll"><a href="#about">About us</a></li>
-                        <li class="scroll"><a href="#blog">lastest post</a></li> 
-                        <li class="scroll"><a href="#get-in-touch">Contact</a></li>  
+                        <li class="scroll"><a href="#lastest-posts">lastest post</a></li> 
+                        <li class="scroll"><a href="#contact">Contact</a></li>  
+                        <?php endif ?>
                     </ul>
                 </div>
-                <div class="col-sm-2 menu">
+                <div class="col-md-2 col-sm-12 menu">
                     <ul class="social-icons">
                         <li><a href="<?php echo get_field('facebook', 15); ?>"><i class="fa fa-twitter-square fa-3x"></i></a></li>
                         <li><a href="<?php echo get_field('twitter', 15); ?>"><i class="fa fa-facebook-square fa-3x"></i></a></li>

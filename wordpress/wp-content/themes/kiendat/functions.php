@@ -20,12 +20,12 @@ add_action('after_setup_theme', 'agilsun_imagesize');
  * Menu Locations
  */
 if (function_exists('wp_nav_menu')) {
-	function kiendat_wp_my_menus() {
+	function agilsun_wp_my_menus() {
 		register_nav_menus(array(
 				'header-menu' => __('Header menu')
 		));
 	}
-	add_action('init', 'kiendat_wp_my_menus');
+	add_action('init', 'agilsun_wp_my_menus');
 }
 
 /**

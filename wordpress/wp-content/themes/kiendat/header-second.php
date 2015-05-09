@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>kiendat</title>
+    <title>kien dat</title>
   <!-- core CSS -->
     <link href="<?php bloginfo( 'template_url' ) ?>/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php bloginfo( 'template_url' ) ?>/css/font-awesome.min.css" rel="stylesheet">
@@ -33,7 +33,7 @@
 
     <header id="header">
 
-        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
+        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top main-menu-header-second" role="banner">
             <div class="top-header">
                 <div class="container">
                     <div class="row">
@@ -55,39 +55,6 @@
                     </div>
                     </div>
                 </div>
-            </div>
-            <div class="main-menu">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="<?php bloginfo('url'); ?>"><img src="images/logo.png" alt="logo"></a>
-                    </div>
-                    
-                    <!--menu-->
-                    <div class="collapse navbar-collapse navbar-right">
-                        <ul class="nav navbar-nav">
-                            <?php if(qtrans_getLanguage() == "vi") : ?>
-                            <li class="scroll"><a href="#services">Dịch vụ</a></li>
-                            <li class="scroll"><a href="#project">dự án</a></li>
-                            <li class="scroll"><a href="#about">giới thiệu</a></li>
-                            <li class="scroll"><a href="#lastest-posts">bài viết gần đây</a></li> 
-                            <li class="scroll"><a href="#contact">liên hệ</a></li>  
-                            <?php endif ?>
-                            <?php if(qtrans_getLanguage() == "en") : ?>
-                            <li class="scroll"><a href="#services">services</a></li>
-                            <li class="scroll"><a href="#project">Project</a></li>
-                            <li class="scroll"><a href="#about">About us</a></li>
-                            <li class="scroll"><a href="#lastest-posts">lastest post</a></li> 
-                            <li class="scroll"><a href="#contact">Contact</a></li>  
-                            <?php endif ?>
-                        </ul>
-                    </div>
-                </div><!--/.container-->
             </div>
         </nav><!--/nav-->
     </header><!--/header-->

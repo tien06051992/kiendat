@@ -1,29 +1,19 @@
 <?php
-/**
- * The template for displaying 404 pages (not found)
- *
- * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
- */
+get_header( 'second' );
+?>
 
-get_header(); ?>
-
-	<!--main-->
+<section id="single">
+  <div class="container">
     <div class="row">
-      <div class="bredcrumb">
-        <a href="<?php bloginfo('url'); ?>" class="index-breadcrumb">Home > </a><span>Error</span>
-      </div>
-      <div class="main-content">
-        <!--left-content-->
-        <div class="col-md-8">
-          <h3 class="error">Error 404</h3>
+      <div class="col-sm-8 col-sm-offset-2">
+        <div class="bredcrumb">
+          <a href="<?php bloginfo('url'); ?>" class="index-breadcrumb">Home > </a><span>ERROR</span>
         </div>
-        <!--/left-content-->
-        <!--right-content-->
-       <?php get_sidebar(); ?>
-        <!--/right-content-->
+      </div>
+       <div class="col-sm-8 col-sm-offset-2">
+        <h2>404 NOT FOUND</h2>
       </div>
     </div>
-
+  </div>
+</section>
 <?php get_footer(); ?>
