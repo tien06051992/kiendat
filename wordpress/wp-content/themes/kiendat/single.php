@@ -1,7 +1,5 @@
 <?php
 get_header( 'second' );
-$cat = get_query_var('cat');
-$yourcat = get_category($cat);
 if (have_posts()) : the_post();
 $post_id = get_the_ID();
 ?>
@@ -12,10 +10,10 @@ $post_id = get_the_ID();
       <div class="col-sm-12">
         <div class="bredcrumb">
           <?php if(qtrans_getLanguage() == "vi") : ?>
-            <a href="<?php bloginfo('url'); ?>" class="index-breadcrumb">Trang chủ > </a><span><?php echo $yourcat->name; ?></span>
+            <a href="<?php bloginfo('url'); ?>" class="index-breadcrumb">Trang chủ > </a><span><?php the_category(' '); ?></span>
           <?php endif ?>
           <?php if(qtrans_getLanguage() == "en") : ?>
-             <a href="<?php bloginfo('url'); ?>" class="index-breadcrumb">Home > </a><span><?php echo $yourcat->name; ?></span>
+             <a href="<?php bloginfo('url'); ?>" class="index-breadcrumb">Home > </a><span><?php the_category(' '); ?></span>
           <?php endif ?>
         </div><!--/bredcrumb-->
       </div><!--/col-sm-8 col-sm-offset-2-->
