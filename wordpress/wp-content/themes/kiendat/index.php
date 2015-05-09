@@ -29,7 +29,7 @@ get_header(); ?>
     <section id="services" >
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">Services</h2>
+                <h2 class="section-title text-center wow fadeInDown"><?php echo get_field('service_title', 15); ?></h2>
                 <p class="text-center wow fadeInDown short-intro"><?php echo get_field('service_description', 15); ?></p>
             </div>
             <div class="row">
@@ -66,7 +66,7 @@ get_header(); ?>
     <section id="project">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">project</h2>
+                <h2 class="section-title text-center wow fadeInDown"><?php agilsun_get_catogery_name("projects"); ?></h2>
             </div>
 
             <div class="row">
@@ -103,24 +103,24 @@ get_header(); ?>
     <section id="about">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">About Us</h2>
+                <h2 class="section-title text-center wow fadeInDown"><?php agilsun_get_catogery_name("about-us"); ?></h2>
             </div>
             <div class="mytimeline-wrap">
                   <section id="cd-timeline" class="cd-container">
                   <?php 
                     query_posts(array('category_name' => 'about-us'));
+                    $flag = 0;
                     while (have_posts()) : the_post();
                     $post_id = get_the_ID();
-                    $flag = 0;
                     ?>
-                    <div class="cd-timeline-block wow <?php echo ($lag % 2 == 0) ? 'fadeInLeft' : 'fadeInRight' ?>">
+                    <div class="cd-timeline-block wow <?php if($flag % 2 == 0) {echo 'fadeInLeft';} else {echo 'fadeInRight';} ?>">
                         <div class="cd-timeline-img cd-picture">
-                            <div class="cd-date course"><?php echo get_field('timeline', $post_id); ?></div>
-                            <span class="circle-black"></span>
+                            <div class="cd-date course"><?php echo get_field('date_of_event', $post_id); ?></div>
+                            <span class="circle-black hide-on-mobile hide-on-tablet"></span>
                         </div> <!-- cd-timeline-img -->
 
                         <div class="cd-timeline-content">
-                            <h2 class="school-name"><?php the_title(); ?></h2>
+                            <a href="<?php the_permalink(); ?>"><h2 class="school-name"><?php the_title(); ?></h2></a>
                             <p class="info"><?php echo _substr(get_the_excerpt(), 70); ?></p>
                         </div> <!-- cd-timeline-content -->
                     </div> <!-- cd-timeline-block -->
@@ -129,7 +129,10 @@ get_header(); ?>
                         endwhile;
                         wp_reset_query();
                     ?>
-                    <div class="our-story"><div class="cd-date course">Our goes story</div>
+                    <div class="our-story">
+                    <div class="cd-date course">
+                    <?php agilsun_multilanguae_static_text("Our goes story","Lịch Sử"); ?>
+                    </div>
                   </section> <!-- cd-timeline -->
                   <!-- END TIMELINE -->
             </div><!--/row-->
@@ -139,7 +142,7 @@ get_header(); ?>
     <section id="lastest-posts">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">lastest posts</h2>
+                <h2 class="section-title text-center wow fadeInDown"><?php agilsun_multilanguae_static_text("Lastest post","Bài viết mới"); ?></h2>
             </div>
 
             <div class="row">
@@ -157,7 +160,9 @@ get_header(); ?>
                         <div class="lastest-posts-info">
                             <h3><?php echo _substr(get_the_title(), 80); ?></h3>
                             <p><?php echo _substr(get_the_excerpt(), 70); ?></p>
-                            <a href="<?php the_permalink(); ?>">View more detail</a>
+                            <a href="<?php the_permalink(); ?>">
+                            <?php agilsun_multilanguae_static_text("View more detail","Xem chi tiết"); ?>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -166,7 +171,10 @@ get_header(); ?>
                     wp_reset_query();
                 ?>     
             </div>
-            <div class="view-all"><a href="<?php bloginfo('url'); ?>/category/blog">view all</a></div>
+            <div class="view-all">
+            <a href="<?php bloginfo('url'); ?>/category/blog">
+                <?php agilsun_multilanguae_static_text("View all","Xem tất cả"); ?>
+            </a></div>
         </div>
     </section><!--/#lastest-posts-->
 

@@ -12,16 +12,73 @@ and open the template in the editor.
 /* #Tablet (Landscape) 1024px
 ---------------------------------------------------------------------------------------------------------------*/
 @media only screen and (min-width: 960px) and (max-width: 1240px) {
+	.hide-on-tablet {
+		display: none;
+	}
+	/***
+	 * Timeline About Us
+	 */
+	.cd-timeline-content {
+		width: initial;
+	}
+	.cd-timeline-img {
+		height: initial;
+		position: initial;
+		padding: initial;
+		font-style: italic;
 
+	}
+	.cd-timeline-img:before {
+		content: none;
+	}
+
+	.cd-timeline-block:first-child {
+		margin-top: 0;
+	}
+	.cd-timeline-block:nth-child(even) {
+		margin-top: 10px;
+	}
+	.cd-timeline-content h2 {
+		font-size: 25px;
+	}
 }
 
 
 /* #Tablet (Portrait) 768px
 ---------------------------------------------------------------------------------------------------------------*/
 @media only screen and (min-width: 768px) and (max-width: 959px) {
+	.hide-on-tablet {
+		display: none;
+	}
+
 	#footer .social-icons {
         float: left;
     }
+    /***
+	 * Timeline About Us
+	 */
+	.cd-timeline-content {
+		width: initial;
+	}
+	.cd-timeline-img {
+		height: initial;
+		position: initial;
+		padding: initial;
+		font-style: italic;
+	}
+	.cd-timeline-img:before {
+		content: none;
+	}
+
+	.cd-timeline-block:first-child {
+		margin-top: 0;
+	}
+	.cd-timeline-block:nth-child(even) {
+		margin-top: 10px;
+	}
+	.cd-timeline-content h2 {
+		font-size: 25px;
+	}
 }
 
 
@@ -29,12 +86,135 @@ and open the template in the editor.
 ---------------------------------------------------------------------------------------------------------------*/
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 
-    
+	.hide-on-mobile {
+		display: none;
+	}
+    /**
+	 * Header 
+	 */
+	 .top-header .social-icon {
+	 	float: left;
+	 }
+	 .navbar.navbar-default .navbar-toggle {
+	 	margin-top: 18px;
+	 }
+	/***
+	 * Get started
+	 */
+	#cta-banner  {
+	  padding-top: 42px;
+	  padding-bottom: 18px;
+	}
+	#cta-banner h2 {
+		font-size: 30px;
+		margin: 17px auto;
+	}
+
+	/***
+	 * Dich vu
+	 */
+	 .short-intro {
+	 	font-size: 18px;
+	 }
+	 /***
+	 * Timeline About Us
+	 */
+	.cd-timeline-content {
+		width: initial;
+	}
+	.cd-timeline-img {
+		height: initial;
+		position: initial;
+		padding: initial;
+		font-style: italic;
+	}
+	.cd-timeline-img:before {
+		content: none;
+	}
+
+	.cd-timeline-block:first-child {
+		margin-top: 0;
+	}
+	.cd-timeline-block:nth-child(even) {
+		margin-top: 10px;
+	}
+	.cd-timeline-content h2 {
+		font-size: 25px;
+	}
+	#contact #google-map{
+		height: 150px !important;
+	}
+	#contact .container-wrapper {
+		position: initial;
+	}
 }
 
 /*  #Mobile (Portrait) 320px
 ---------------------------------------------------------------------------------------------------------------*/
 @media only screen and (min-width: 100px) and (max-width: 479px) {
+	.hide-on-mobile {
+		display: none;
+	}
+	/**
+	 * Header 
+	 */
+	 .top-header .social-icon {
+	 	float: left;
+	 }
+	 .navbar.navbar-default .navbar-toggle {
+	 	margin-top: 18px;
+	 }
+	/***
+	 * Get started
+	 */
+	#cta-banner  {
+	  padding-top: 42px;
+	  padding-bottom: 18px;
+	}
+	#cta-banner h2 {
+		font-size: 30px;
+		margin: 17px auto;
+	}
 
-	
+	/***
+	 * Dich vu
+	 */
+	 .short-intro {
+	 	font-size: 18px;
+	 }
+	 /***
+	 * Timeline About Us
+	 */
+	.cd-timeline-content {
+		width: initial;
+	}
+	.cd-timeline-img {
+		height: initial;
+		position: initial;
+		padding: initial;
+		font-style: italic;
+	}
+	.cd-timeline-img:before {
+		content: none;
+	}
+
+	.cd-timeline-block:first-child {
+		margin-top: 0;
+	}
+	.cd-timeline-block:nth-child(even) {
+		margin-top: 10px;
+	}
+	.cd-timeline-content h2 {
+		font-size: 25px;
+	}
+
+	/**
+	 * Contact
+	 */
+	#contact #google-map{
+		height: 150px !important;
+	}
+	#contact .container-wrapper {
+		position: initial;
+	}
 }

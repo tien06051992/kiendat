@@ -33,7 +33,7 @@
     </footer><!--/#footer-->
 
     <div id="go-to-top" style="display: block;"><i class="fa fa-angle-up"></i></div>
-
+    <?php wp_footer(); ?>
     <script src="<?php bloginfo( 'template_url' ) ?>/js/jquery.js"></script>
     <script src="<?php bloginfo( 'template_url' ) ?>/js/bootstrap.min.js"></script>
     <script src="http://maps.google.com/maps/api/js?sensor=true"></script>

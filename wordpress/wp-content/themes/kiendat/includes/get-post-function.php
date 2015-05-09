@@ -195,3 +195,10 @@ function agilsun_excerpt($length_callback = '', $more_callback = '') {
      
      echo $output;
 };
+/**
+ * Show static text follow multilanguae
+ */
+function agilsun_multilanguae_static_text($en = '',$vi = '') {
+    $result = "<!--:en-->" . $en . "<!--:--><!--:vi-->" . $vi . "<!--:-->";
+    echo qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($result);
+}
