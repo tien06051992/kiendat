@@ -29,12 +29,16 @@ and open the template in the editor.
 ---------------------------------------------------------------------------------------------------------------*/
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 
-    
+    #single h2 {
+		font-size: 24px;
+	}
 }
 
 /*  #Mobile (Portrait) 320px
 ---------------------------------------------------------------------------------------------------------------*/
 @media only screen and (min-width: 100px) and (max-width: 479px) {
 
-	
+	   #single h2 {
+		font-size: 24px;
+	}
 }
