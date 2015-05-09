@@ -85,7 +85,6 @@ and open the template in the editor.
 /* #Mobile (Landscape) 480px
 ---------------------------------------------------------------------------------------------------------------*/
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-
 	.hide-on-mobile {
 		display: none;
 	}
@@ -146,6 +145,9 @@ and open the template in the editor.
 	}
 	#contact .container-wrapper {
 		position: initial;
+	}
+    #single h2 {
+		font-size: 24px;
 	}
 }
 
@@ -216,5 +218,8 @@ and open the template in the editor.
 	}
 	#contact .container-wrapper {
 		position: initial;
+	}
+	   #single h2 {
+		font-size: 24px;
 	}
 }

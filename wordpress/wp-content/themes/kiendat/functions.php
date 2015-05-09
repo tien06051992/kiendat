@@ -11,7 +11,9 @@ include_once( 'includes/get-post-function.php' );
  * Setup Images Size
  */
 function agilsun_imagesize() {
-  add_image_size('img-service', 358, 291, true); // post in index size large
+  add_image_size('img-service', 358, 291, true); // post in service
+  add_image_size('img-thunmbnails', 100, 80, true); // post in sidebar
+  add_image_size('img-category', 260, 200, true); // post in sidebar
   add_theme_support('post-thumbnails');
 }
 add_action('after_setup_theme', 'agilsun_imagesize');
@@ -27,11 +29,6 @@ if (function_exists('wp_nav_menu')) {
 	}
 	add_action('init', 'agilsun_wp_my_menus');
 }
-
-/**
- * get post of project
- */
-
 
 
 /**
@@ -65,6 +62,21 @@ if (function_exists('register_sidebar')) {
         'name' => __('Language Chooser', 'www.kiendat.com'),
         'id' => 'language-chooser',
         'description' => 'Language chooser on top header',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+}
+
+/**
+ * Register sidebar lastest post
+ */
+if (function_exists('register_sidebar')) {
+    register_sidebar(array(
+        'name' => __('Lastest posts', 'www.kiendat.com'),
+        'id' => 'lastest-posts',
+        'description' => 'Lastest posts',
         'before_widget' => '',
         'after_widget' => '',
         'before_title' => '<h3>',
