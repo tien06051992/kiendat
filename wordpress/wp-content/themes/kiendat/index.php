@@ -32,47 +32,35 @@ get_header(); ?>
 
             <div class="section-header">
                 <h2 class="section-title text-center wow fadeInDown">Services</h2>
-                <p class="text-center wow fadeInDown short-intro">Magnis modipsae que lib voloratati andigen daepeditem quiate re porem aut labor. Laceaque quiae sitiorem rest non restibusaes maio es dem tumquam core posae volor remped modis volor.</p>
+                <p class="text-center wow fadeInDown short-intro"><?php echo get_field('service_description', 15); ?></p>
             </div>
 
             <div class="row">
                 <div class="features">
-                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
                         <div class="media service-box">
                             <div class="pull-left">
                                 <i class="fa fa-heart-o fa-4x"></i>
                             </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">UX design</h4>
-                                <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
-                            </div>
+                            <?php echo get_field('service_1', 15); ?>
                         </div>
-                    </div><!--/.col-md-4-->
-
-                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
-                        <div class="media service-box">
-                            <div class="pull-left">
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">UI design</h4>
-                                <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-
+                    </div> <!--/col-md-4-->
                     <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
                         <div class="media service-box">
                             <div class="pull-left">
                                 <i class="fa fa-star-o"></i>
                             </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">SEO Services</h4>
-                                <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
-                            </div>
+                            <?php echo get_field('service_2', 15); ?>
                         </div>
-                    </div><!--/.col-md-4-->
-                
+                    </div> <!--/col-md-4-->
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <?php echo get_field('service_3', 15); ?>
+                        </div>
+                    </div> <!--/col-md-4-->
                 </div>
             </div><!--/.row-->    
         </div><!--/.container-->
@@ -85,40 +73,28 @@ get_header(); ?>
             </div>
 
             <div class="row">
+                <?php 
+                    query_posts(array('category_name' => 'projects'));
+                    while (have_posts()) : the_post();
+                    $post_id = get_the_ID();
+                ?>
                 <div class="col-sm-4 col-md-4">
                     <div class="project-item wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
-                        <div class="project-img">
-                            <img class="img-responsive" src="images/project/img1.png" alt="">
-                        </div>
-                        <div class="project-info">
-                            <h3>Jane Man</h3>
-                            <span>Project Manager</span>
-                        </div>
+                        <a href="<?php the_permalink(); ?>">
+                            <div class="project-img">
+                                <?php the_post_thumbnail('img-service'); ?>
+                            </div>
+                            <div class="project-info">
+                                <h3><?php echo _substr(get_the_title(), 80); ?></h3>
+                                <span><?php echo get_field('type_field', $post_id); ?></span>
+                            </div>
+                        </a>
                     </div>
-                </div><!--/col-md-4-->
-                
-                <div class="col-sm-4 col-md-4">
-                    <div class="project-item wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
-                        <div class="project-img">
-                            <img class="img-responsive" src="images/project/img2.png" alt="">
-                        </div>
-                        <div class="project-info">
-                            <h3>Jane Man</h3>
-                            <span>Project Manager</span>
-                        </div>
-                    </div>
-                </div><!--/col-md-4-->
-                <div class="col-sm-4 col-md-4">
-                    <div class="project-item wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
-                        <div class="project-img">
-                            <img class="img-responsive" src="images/project/img2.png" alt="">
-                        </div>
-                        <div class="project-info">
-                            <h3>Jane Man</h3>
-                            <span>Project Manager</span>
-                        </div>
-                    </div>
-                </div><!--/col-md-4-->
+                </div>
+                <?php
+                    endwhile;
+                    wp_reset_query();
+                ?>     
             </div>
 
             <div class="divider"></div>
@@ -127,7 +103,7 @@ get_header(); ?>
     </section><!--/#project-->
 
 
-    <?php /* <section id="about">
+    <section id="about">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title text-center wow fadeInDown">About Us</h2>
@@ -188,7 +164,7 @@ get_header(); ?>
                 </div>
             </div><!--/row-->
         </div><!--/about-->
-    </section><!--/#about--> */ ?>
+    </section><!--/#about-->
 
     <section id="lastest-posts">
         <div class="container">
@@ -197,73 +173,47 @@ get_header(); ?>
             </div>
 
             <div class="row">
+                <?php 
+                    query_posts(array('category_name' => 'blog','posts_per_page' => 3));
+                    while (have_posts()) : the_post();
+                    $post_id = get_the_ID();
+                ?>
                 <div class="col-sm-4 col-md-4">
                     <div class="lastest-posts-item wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
                         <div class="lastest-posts-img">
-                            <img class="img-responsive" src="images/project/img1.png" alt="">
+                            <?php the_post_thumbnail('img-service'); ?>
                             <span></span>
                         </div>
                         <div class="lastest-posts-info">
-                            <h3>TITLE 01</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            <a href="">View more detail</a>
+                            <h3><?php echo _substr(get_the_title(), 80); ?></h3>
+                            <p><?php echo the_excerpt(); ?></p>
+                            <a href="<?php the_permalink(); ?>">View more detail</a>
                         </div>
                     </div>
-                </div><!--/col-md-4-->
-                
-                <div class="col-sm-4 col-md-4">
-                    <div class="lastest-posts-item wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
-                        <div class="lastest-posts-img">
-                            <img class="img-responsive" src="images/project/img2.png" alt="">
-                            <span></span>
-                        </div>
-                        <div class="lastest-posts-info">
-                            <h3>TITLE 01</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            <a href="">View more detail</a>
-                        </div>
-                    </div>
-                </div><!--/col-md-4-->
-                <div class="col-sm-4 col-md-4">
-                    <div class="lastest-posts-item wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
-                        <div class="lastest-posts-img">
-                            <img class="img-responsive" src="images/project/img2.png" alt="">
-                            <span></span>
-                        </div>
-                        <div class="lastest-posts-info">
-                            <h3>TITLE 01</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            <a href="">View more detail</a>
-                        </div>
-                    </div>
-                </div><!--/col-md-4-->
+                </div>
+                <?php
+                    endwhile;
+                    wp_reset_query();
+                ?>     
             </div>
-            <div class="view-all"><a href="">view all</a></div>
+            <div class="view-all"><a href="<?php bloginfo('url'); ?>/category/blog">view all</a></div>
+        </div>
     </section><!--/#lastest-posts-->
 
 
     <section id="contact">
-        <div id="google-map" style="height:650px" data-latitude="52.365629" data-longitude="4.871331"></div>
+        <?php echo get_field('google_map', 15); ?>
         <div class="container-wrapper">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 col-md-6">
-                            <address>
-                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,.<br>
-
-                                Khlong Tan Nuea, Wattana<br>
-                                Bangkok 10110, Thailand<br><br>
-
-                                <abbr title="Phone">T: +662 107 2027<br>
-                                <abbr title="Phone">F: +662 711 573<br><br>
-                                E: info@kiendats.com<br>
-                                W: www.kiendats.com<br>
-                            </address>
+                    <div class="col-sm-6 col-md-6 info">
+                            <?php echo get_field('info', 15); ?>
                     </div>
                     <div class="col-sm-4 col-md-4 col-sm-offset-2">
                         <div class="contact-form">
-
-                            <form id="main-contact-form" name="contact-form" method="post" action="#">
+                            <?php $page_id = 43;?>
+                            <?php agilsun_get_page_content($page_id); ?>
+                            <!-- <form id="main-contact-form" name="contact-form" method="post" action="#">
                                 <div class="form-group">
                                     <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                                 </div>
@@ -277,7 +227,8 @@ get_header(); ?>
                                     <textarea name="message" class="form-control" rows="8" placeholder="Message" required></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-send-message">SEND</button>
-                            </form>
+                            </form> -->
+
                         </div>
                     </div>
                 </div>

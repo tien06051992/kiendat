@@ -1,11 +1,11 @@
 <footer id="footer">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-6 copy-right">
                     &copy; 2015 KIENDAT. All rights reserved.
                 </div>
-                <div class="col-sm-4">
-                    <ul class="menu-footer">
+                <div class="col-sm-4 menu-footer">
+                    <ul>
                         <li class="scroll"><a href="#services">services</a></li>
                         <li class="scroll"><a href="#portfolio">Project</a></li>
                         <li class="scroll"><a href="#about">About us</a></li>
@@ -13,10 +13,10 @@
                         <li class="scroll"><a href="#get-in-touch">Contact</a></li>  
                     </ul>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-2 menu">
                     <ul class="social-icons">
-                        <li><a href="#"><i class="fa fa-twitter-square fa-3x"></i></a></li>
-                        <li><a href="#"><i class="fa fa-facebook-square fa-3x"></i></a></li>
+                        <li><a href="<?php echo get_field('facebook', 15); ?>"><i class="fa fa-twitter-square fa-3x"></i></a></li>
+                        <li><a href="<?php echo get_field('twitter', 15); ?>"><i class="fa fa-facebook-square fa-3x"></i></a></li>
                     </ul>
                 </div>
             </div>

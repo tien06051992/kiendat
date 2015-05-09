@@ -71,10 +71,13 @@ h6 {
 .top-header .top-header-item li {
 	display: inline-block;
 	list-style: none;
-	color: #506a85;
 	font-size: 12px;
 	font-family: 'Times new roman' ,sans-serif;
 	padding: 0px 17px 0px 0px;
+}
+
+.top-header .top-header-item li a {
+	color: #506a85;
 }
 
 .top-header .top-header-item li span{
@@ -89,6 +92,19 @@ h6 {
 	background: #fff;
 }
 
+.language-bar ul {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.language-bar ul li {
+	display: inline-block;
+}
+
+.language-bar ul li a {
+	color: #506a85;
+}
 
 /*----------------------------------------- cta ------------------------------------------*/
 
@@ -153,6 +169,13 @@ h6 {
     border: 1px solid #eaedf0;
 }
 
+.project-img {
+	text-align: center;
+}
+
+.project-img img {
+	max-width: 100%;
+}
 .project-info {
 	text-align: center;
 }
@@ -210,6 +233,11 @@ h6 {
 
 .lastest-posts-img {
 	position: relative;
+	text-align: center;
+}
+
+.lastest-posts-img img {
+	max-width: 100%;
 }
 .lastest-posts-img span{
 	width: 100%;
@@ -217,6 +245,7 @@ h6 {
 	background: rgba(0,0,0,0.5);
 	position: absolute;
 	top: 0px;
+	left: 0px;
 }
 
 .view-all a{
@@ -233,7 +262,7 @@ h6 {
 }
 
 /*------------------------------ about us ---------------------------------*/
-#cd-timeline::before {
+/*#cd-timeline::before {
 	background: #070707;
 }
 
@@ -247,7 +276,7 @@ h6 {
 
 .cd-timeline-content {
 	box-shadow: none;
-}
+}*/
 
 /* ----------------------------- contact us ------------------------------- */
 #contact .container-wrapper {
@@ -259,26 +288,30 @@ h6 {
 	padding: 20px 0px 20px 10px;
 }
 
-#main-contact-form .form-control {
+#contact .contact-form .form-control {
 	border-radius: 0px;
 	border: 1px solid #000000;
 	color: #000;
 	font-family: Arial, Helvetica, sans-serif
 }
 
-#main-contact-form .form-control::-webkit-input-placeholder {
+#contact .contact-form textarea {
+	resize: none;
+}
+
+#contact .contact-form .form-control::-webkit-input-placeholder {
    color: #000;
 }
 
-#main-contact-form .form-control:-moz-placeholder { /* Firefox 18- */
+#contact .contact-form .form-control:-moz-placeholder { /* Firefox 18- */
    color: #000;  
 }
 
-#main-contact-form .form-control::-moz-placeholder {  /* Firefox 19+ */
+#contact .contact-form .form-control::-moz-placeholder {  /* Firefox 19+ */
    color: #000;  
 }
 
-#main-contact-form .form-control:-ms-input-placeholder {  
+#contact .contact-form .form-control:-ms-input-placeholder {  
    color: #000;  
 }
 
@@ -309,23 +342,30 @@ h6 {
 
 #footer {
 	background: #283645;
-	padding-top: 18px;
-	padding-bottom: 10px;
+	padding: 10px 0px;
 }
 
-#footer span {
-	font-family: 'Times New Roman' , sans-serif;
+#footer .copy-right {
+	font-family: 'Times new roman' ;
 	color: #707e8c;
 	font-size: 13px;
+	padding: 20px 0px;
 }
 
-#footer .menu-footer li a {
-	font-family: 'Times New Roman' , sans-serif;
+#footer .menu-footer {
+	padding: 20px 0px;
+}
+
+#footer .menu-footer ul li a {
+	font-family: 'Times new roman';
 	font-size: 13px;
 	color: #707e8c;
 	text-transform: capitalize;
 }
 
+#footer .social-icons {
+	padding: 10px 0px;
+}
 
 #footer .social-icons .fa-twitter-square {
 	color: #62aadc;
@@ -347,7 +387,7 @@ h6 {
     top: auto;
     left: auto;
     right: 15px;
-    bottom: 15px;
+    bottom: 30px;
     cursor: pointer;
     background: #3c5065;
     color: #949ba2;
@@ -364,4 +404,40 @@ h6 {
 
 #go-to-top:hover i {
 	color: #fff;
+}
+
+
+/* ----------------------------- signle ------------------------------- */
+
+#single {
+	padding: 100px 0px;
+}
+#single h2 {
+	font-size: 50px;
+}
+
+
+#single p.date {
+	font-style: italic;
+}
+
+.name-author {
+	color: #64686d;
+}
+
+#single .content {
+	color: #000;
+}
+
+#single .content img {
+	max-width: 100%;
+}
+
+
+#category {
+	padding: 100px 0px;
+}
+
+#category .img-thumbnail img {
+	max-width: 100%;
 }

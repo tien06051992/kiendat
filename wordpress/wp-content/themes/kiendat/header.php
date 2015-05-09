@@ -39,24 +39,20 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <ul class="top-header-item">
-                                <li><i class="fa fa-envelope-o"></i><span>info@kiendat.com</span></li>
-                                <li><i class="fa fa-mobile"></i><span>+84  938 690 249</span></li>
+                                <li><i class="fa fa-envelope-o"></i><span><?php echo get_field('email', 15); ?></span></li>
+                                <li><i class="fa fa-mobile"></i><span><?php echo get_field('phone_number', 15); ?></span></li>
                             </ul>
                         </div>
                         <div class="col-sm-5 social-icon">
                             <ul class="top-header-item">
-                                <li><i class="fa fa-facebook"></i></li>
-                                <li><i class="fa fa-google-plus"></i></li>
-                                <li><i class="fa fa-twitter"></i></li>
+                                <li><a href="<?php echo get_field('facebook', 15); ?>"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="<?php echo get_field('google_plus', 15); ?>"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="<?php echo get_field('twitter', 15); ?>"><i class="fa fa-twitter"></i></a></li>
                             </ul>
                         </div>
-                   <!--  <div class="col-sm-1">
-                        <ul class="top-header-item">
-                            <li><i class="fa fa-facebook"></i></li>
-                            <li><i class="fa fa-google-plus"></i></li>
-                            <li><i class="fa fa-twitter"></i></li>
-                        </ul>
-                    </div> -->
+                    <div class="col-sm-1 language-bar">
+                        <?php dynamic_sidebar('language-chooser'); ?> 
+                    </div>
                     </div>
                 </div>
             </div>
@@ -69,16 +65,16 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+                        <a class="navbar-brand" href="<?php bloginfo('url'); ?>"><img src="images/logo.png" alt="logo"></a>
                     </div>
             
                     <div class="collapse navbar-collapse navbar-right">
                         <ul class="nav navbar-nav">
                             <li class="scroll"><a href="#services">services</a></li>
-                            <li class="scroll"><a href="#portfolio">Project</a></li>
+                            <li class="scroll"><a href="#project">Project</a></li>
                             <li class="scroll"><a href="#about">About us</a></li>
                             <li class="scroll"><a href="#lastest-posts">lastest post</a></li> 
-                            <li class="scroll"><a href="#get-in-touch">Contact</a></li>                        
+                            <li class="scroll"><a href="#contact">Contact</a></li>                        
                         </ul>
                     </div>
                 </div><!--/.container-->

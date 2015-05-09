@@ -19,22 +19,6 @@ function agilsun_query_get_all_post($catslug, $numpost) {
 }
 
 /**
- * Agilsun get post top content in home
- */
-function agilsun_get_post_aus($catogery, $numpost) {
-    agilsun_query($catogery, $numpost);
-    while (have_posts()) : the_post();
-        ?>
-        <div class="col-img">
-            <span class="rollover" ><?php the_date('d/m/y'); ?></span>
-            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('aus-post'); ?></a>
-        </div>
-        <?php
-    endwhile;
-    wp_reset_query();
-}
-
-/**
  * Agilsun get post news slide
  */
 function agilsun_get_post_news_slide($catogery, $numpost) {
@@ -52,7 +36,7 @@ function agilsun_get_post_news_slide($catogery, $numpost) {
 }
 
 /**
- * lấy tất cả post của category hiện tại
+ * lget all post
  */
 function agilsun_get_post_cat() {
     while (have_posts()) : the_post();
@@ -82,7 +66,7 @@ function agilsun_fb_comment_count($url)
 }
 
 /**
- * lấy tên category hiện tại
+ * get name current category
  */
 function agilsun_get_current_cat_name() {
     if (is_category()) {
@@ -93,7 +77,7 @@ function agilsun_get_current_cat_name() {
 }
 
 /**
- * lấy post của category dịch vụ bằng slug
+ * get post by slug
  */
 function agilsun_get_post_cat_by_slug($slug, $numpost) {
     agilsun_query_get_all_post($slug, $numpost);
@@ -110,80 +94,7 @@ function agilsun_get_post_cat_by_slug($slug, $numpost) {
     wp_reset_query();
 }
 
-/**
- * lấy post của category tin tuc bằng slug
- */
-function agilsun_get_post_cat_tin_tuc_by_slug($slug, $numpost) {
-    agilsun_query_get_all_post($slug, $numpost);
-    while (have_posts()) : the_post();
-        ?>
-        <li>
-            <a href="<?php the_permalink(); ?>">
-                <?php the_post_thumbnail('ssize'); ?>
-                <div class="excerpt">
-                <h3><?php the_title(); ?></h3>
-                <p><?php agilsun_excerpt("agilsun_excerptlength_cat","agilsun_excerptmore"); ?></p>
-                </div>
-            </a>
-        </li>
-        <?php
-    endwhile;
-    wp_reset_query();
-}
 
-
-/**
-* get post vn update 13/03/2014 
-*/
-
-function agilsun_get_post_vn_au($slug, $numpost) {
-    agilsun_query_get_all_post($slug, $numpost);
-     $count = 1;
-    while (have_posts()) : the_post();
-    if ($count < 5){
-        ?>
-        <!-- content-post-->
-            <div class="col-md-3 content-post">
-                <a href="<?php the_permalink(); ?>">
-                    <!-- img-post-vn -->
-                    <div class="img-post-vn-au">
-                        <?php the_post_thumbnail('vietnam-au-img'); ?>
-                    </div><!-- /img-post-vn -->
-                    <!-- inf-post-vn -->
-                    <div class="inf-post-vn-au">
-                        <p><?php agilsun_excerpt("agilsun_excerptlength_vn_au","agilsun_excerptmore"); ?>
-                        </p>
-                    </div><!-- /inf-post-vn -->
-                    <div class="readmore-post">
-                        <a href="<?php the_permalink(); ?>">more...</a>
-                    </div>
-                </a>
-            </div>
-        <!-- /content-post-->
-        <?php     $count = $count+1;} elseif ($count==5) { ?>
-        <!-- content-post-->
-        <div  class="welcome">
-            <div class="row">
-            <a href="<?php the_permalink(); ?>">
-                <div class="col-md-3 image-welcome">
-                    <?php the_post_thumbnail('welcome-img');?>
-                </div>
-                <div class="col-md-9 intro-welcome">                
-                    <h4><?php the_title(); ?></h4>
-                    <p><?php agilsun_excerpt("agilsun_excerptlength_vn_au","agilsun_excerptmore"); ?></p>
-                    <div class="readmore-post">
-                        <a href="<?php the_permalink(); ?>">more...</a>
-                </div>
-            </a>
-        </div>
-        </div>
-        <!-- /content-post-->
-    <?php }
-        
-    endwhile;
- wp_pagenavi();
-    wp_reset_query();
-}
 
 
 /**
@@ -243,32 +154,6 @@ echo agilsun_get_the_slug();
 }
 
 
-/**
- * Excerpt length for Education
- */
-function agilsun_excerptlength_edu($length) {
-    return 30;
-};
-
-
-/**
- * Excerpt length for Tour
- */
-function agilsun_excerptlength_tour($length) {
-    return 30;
-};
-
-
-/**
- * Excerpt length for Tour
- */
-function agilsun_excerptlength_vn_au($length) {
-    return 20;
-};
-
-function agilsun_excerptlength_vn_au_post($length) {
-    return 110;
-};
 /**
  * Excerpt length for Index
  */
