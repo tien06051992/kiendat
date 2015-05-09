@@ -159,6 +159,9 @@ h6 {
 	height: 63px;
   	padding: 20px;
 }
+#cta-banner .btn:hover {
+	background: #0DE0BC !important;
+}
 
 /* ---------------------------------------- services --------------------------------------*/
 
@@ -285,7 +288,7 @@ h6 {
 	left: 0px;
 }
 
-.view-all a{
+.view-all a {
 	display: block;
 	width: 295px;
 	margin: 50px auto 0px auto;
@@ -296,6 +299,10 @@ h6 {
 	font-size: 18px;
 	text-transform: uppercase;
 	font-weight: bold;
+}
+
+.view-all a:hover {
+	background: #0DE0BC;
 }
 
 /*------------------------------ about us ---------------------------------*/
