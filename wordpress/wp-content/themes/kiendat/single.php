@@ -12,10 +12,10 @@ $post_id = get_the_ID();
       <div class="col-sm-12">
         <div class="bredcrumb">
           <?php if(qtrans_getLanguage() == "vi") : ?>
-            <a href="<?php bloginfo('url'); ?>" class="index-breadcrumb">Trang chủ > </a><span><?php echo $category[0]->cat_name;; ?></span>
+            <a href="<?php bloginfo('url'); ?>" class="index-breadcrumb">Trang chủ > </a><span><?php the_category(' '); ?>></span>
           <?php endif ?>
           <?php if(qtrans_getLanguage() == "en") : ?>
-             <a href="<?php bloginfo('url'); ?>" class="index-breadcrumb">Home > </a><span><?php echo $category[0]->cat_name;; ?></span>
+             <a href="<?php bloginfo('url'); ?>" class="index-breadcrumb">Home > </a><span><?php the_category(' '); ?></span>
           <?php endif ?>
         </div><!--/bredcrumb-->
       </div><!--/col-sm-12-->
