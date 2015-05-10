@@ -43,4 +43,4 @@ $post_id = get_the_ID();
   </div><!--/container-->
 </section>
 <?php endif; ?>
-<?php get_footer(); ?>
+<?php get_footer( 'second'); ?>
