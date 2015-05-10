@@ -1,6 +1,6 @@
 <?php
 get_header( 'second' );
-$cat = get_query_var('cat');
+$category = get_the_category();
 $yourcat = get_category($cat);
 if (have_posts()) : the_post();
 $post_id = get_the_ID();
@@ -12,13 +12,14 @@ $post_id = get_the_ID();
       <div class="col-sm-12">
         <div class="bredcrumb">
           <?php if(qtrans_getLanguage() == "vi") : ?>
-            <a href="<?php bloginfo('url'); ?>" class="index-breadcrumb">Trang chủ > </a><span><?php echo $yourcat->name; ?></span>
+            <a href="<?php bloginfo('url'); ?>" class="index-breadcrumb">Trang chủ > </a><span><?php echo $category[0]->cat_name;; ?></span>
           <?php endif ?>
           <?php if(qtrans_getLanguage() == "en") : ?>
-             <a href="<?php bloginfo('url'); ?>" class="index-breadcrumb">Home > </a><span><?php echo $yourcat->name; ?></span>
+             <a href="<?php bloginfo('url'); ?>" class="index-breadcrumb">Home > </a><span><?php echo $category[0]->cat_name;; ?></span>
           <?php endif ?>
         </div><!--/bredcrumb-->
-      </div><!--/col-sm-8 col-sm-offset-2-->
+      </div><!--/col-sm-12-->
+
       <div class="col-sm-3 side-bar">
         <?php if(qtrans_getLanguage() == "vi") : ?>
           <h4 class="title">Bài viết xem nhiều</h4>
@@ -28,6 +29,7 @@ $post_id = get_the_ID();
         <?php endif ?>
         <?php dynamic_sidebar('lastest-posts'); ?> 
       </div><!--/side-bar-->
+
       <div class="col-sm-9">
         <h2><?php the_title(); ?></h2>
         <p class="date"><?php the_time('m/d/y');?></p>
@@ -35,7 +37,8 @@ $post_id = get_the_ID();
         <div class="content">
           <?php the_content();?>
         </div><!--/content-->
-      </div><!--/col-sm-8 col-sm-offset-2-->
+      </div><!--/col-sm-9-->
+      
     </div><!--/row-->
   </div><!--/container-->
 </section>

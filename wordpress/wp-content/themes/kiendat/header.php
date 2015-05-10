@@ -41,10 +41,8 @@
 </head><!--/head-->
 
 <body id="home" class="homepage">
-
     <header id="header">
-
-        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
+        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top">
             <div class="top-header">
                 <div class="container">
                     <div class="row">
@@ -53,20 +51,21 @@
                                 <li><i class="fa fa-envelope-o"></i><span><?php echo get_field('email', 15); ?></span></li>
                                 <li><i class="fa fa-mobile"></i><span><?php echo get_field('phone_number', 15); ?></span></li>
                             </ul>
-                        </div>
+                        </div><!--/col-sm-5-->
                         <div class="col-sm-5 social-icon">
                             <ul class="top-header-item">
                                 <li><a href="<?php echo get_field('facebook', 15); ?>"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="<?php echo get_field('google_plus', 15); ?>"><i class="fa fa-google-plus"></i></a></li>
                                 <li><a href="<?php echo get_field('twitter', 15); ?>"><i class="fa fa-twitter"></i></a></li>
                             </ul>
-                        </div>
-                    <div class="col-sm-2 language-bar">
-                        <?php dynamic_sidebar('language-chooser'); ?> 
+                        </div><!--/social-icon-->
+                        <div class="col-sm-2 language-bar">
+                            <?php dynamic_sidebar('language-chooser'); ?> 
+                        </div><!--/language-bar-->
                     </div>
-                    </div>
-                </div>
-            </div>
+                </div><!--/container-->
+            </div><!--/top-header-->
+
             <div class="main-menu">
                 <div class="container">
                     <div class="navbar-header">
@@ -77,7 +76,7 @@
                             <span class="icon-bar"></span>
                         </button>
                         <a class="navbar-brand" href="<?php bloginfo('url'); ?>"><img src="images/logo.png" alt="logo"></a>
-                    </div>
+                    </div><!--/navbar-header-->
                     
                     <!--menu-->
                     <div class="collapse navbar-collapse navbar-right">
@@ -96,9 +95,10 @@
                             <li class="scroll"><a href="#lastest-posts">lastest post</a></li> 
                             <li class="scroll"><a href="#contact">Contact</a></li>  
                             <?php endif ?>
-                        </ul>
-                    </div>
+                        </ul><!--/navbar-nav-->
+                    </div><!--/collapse-->
                 </div><!--/.container-->
-            </div>
-        </nav><!--/nav-->
+            </div><!--/main-menu-->
+            
+        </nav><!--/#main-menu-->
     </header><!--/header-->

@@ -1,9 +1,9 @@
-<?php
-get_header( 'second' );
-$cat = get_query_var('cat');
-$yourcat = get_category($cat);
-?>
-    <!--main-->
+  <?php
+  get_header( 'second' );
+  $cat = get_query_var('cat');
+  $yourcat = get_category($cat);
+  ?>
+    
   <section id="category">
     <div class="container">
       <div class="row">
@@ -17,6 +17,7 @@ $yourcat = get_category($cat);
             <?php endif ?>
           </div><!--/bredcrumb-->
         </div><!--/col-sm-8 col-sm-offset-2-->
+
         <div class="col-sm-3 side-bar">
           <?php if(qtrans_getLanguage() == "vi") : ?>
             <h4 class="title">Bài viết xem nhiều</h4>
@@ -26,6 +27,7 @@ $yourcat = get_category($cat);
           <?php endif ?>
           <?php dynamic_sidebar('lastest-posts'); ?> 
         </div><!--/side-bar-->
+
         <div class="col-sm-9 img-post-item">
             <?php while (have_posts()) : the_post();?>
                 <div class="post-item">
@@ -41,11 +43,13 @@ $yourcat = get_category($cat);
                 </div>
             <?php endwhile; ?>
         </div><!--/col-sm-12 col-sm-offset-2-->
+
         <div class="col-sm-9 col-sm-offset-3">
           <?php wp_pagenavi(); ?>
-        </div>
+        </div><!--/col-sm-9 col-sm-offset-3-->
+
       </div><!--/row-->
     </div><!--container-->
   </section>
-    
-<?php get_footer(); ?>
+      
+  <?php get_footer(); ?>

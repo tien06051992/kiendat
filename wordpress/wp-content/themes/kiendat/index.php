@@ -40,7 +40,7 @@ get_header(); ?>
                                 <i class="fa fa-heart-o fa-4x"></i>
                             </div>
                             <?php echo get_field('service_1', 15); ?>
-                        </div>
+                        </div><!--/service-box-->
                     </div> <!--/col-md-4-->
                     <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
                         <div class="media service-box">
@@ -48,7 +48,7 @@ get_header(); ?>
                                 <i class="fa fa-lightbulb-o fa-6x"></i>
                             </div>
                             <?php echo get_field('service_2', 15); ?>
-                        </div>
+                        </div><!--/service-box-->
                     </div> <!--/col-md-4-->
                     <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
                         <div class="media service-box">
@@ -56,9 +56,9 @@ get_header(); ?>
                                 <i class="fa fa-star-o"></i>
                             </div>
                             <?php echo get_field('service_3', 15); ?>
-                        </div>
+                        </div><!--/service-box-->
                     </div> <!--/col-md-4-->
-                </div>
+                </div><!--/features-->
             </div><!--/.row-->    
         </div><!--/.container-->
     </section><!--/#services-->
@@ -67,7 +67,7 @@ get_header(); ?>
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title text-center wow fadeInDown"><?php agilsun_get_catogery_name("projects"); ?></h2>
-            </div>
+            </div><!--/section-header-->
 
             <div class="row">
                 <?php 
@@ -87,16 +87,15 @@ get_header(); ?>
                             </div>
                         </a>
                     </div>
-                </div>
+                </div><!--/col-sm-4-->
                 <?php
                     endwhile;
                     wp_reset_query();
                 ?>     
-            </div>
+            </div><!--row-->
 
             <div class="divider"></div>
-
-        </div>
+        </div><!--/container-->
     </section><!--/#project-->
 
 
@@ -106,7 +105,7 @@ get_header(); ?>
                 <h2 class="section-title text-center wow fadeInDown"><?php agilsun_get_catogery_name("about-us"); ?></h2>
             </div>
             <div class="mytimeline-wrap">
-                  <section id="cd-timeline" class="cd-container">
+                <section id="cd-timeline" class="cd-container">
                   <?php 
                     query_posts(array('category_name' => 'about-us'));
                     $flag = 0;
@@ -130,20 +129,20 @@ get_header(); ?>
                         wp_reset_query();
                     ?>
                     <div class="our-story">
-                    <div class="cd-date course">
-                    <?php agilsun_multilanguae_static_text("Our goes story","Lịch Sử"); ?>
-                    </div>
-                  </section> <!-- cd-timeline -->
-                  <!-- END TIMELINE -->
-            </div><!--/row-->
-        </div><!--/about-->
+                        <div class="cd-date course">
+                        <?php agilsun_multilanguae_static_text("Our goes story","Lịch Sử"); ?>
+                        </div>
+                    </div><!--our-story-->
+                </section> <!-- cd-timeline -->
+            </div><!--/mytimeline-wrap-->
+        </div><!--/container-->
     </section><!--/#about-->
 
     <section id="lastest-posts">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title text-center wow fadeInDown"><?php agilsun_multilanguae_static_text("Lastest post","Bài viết mới"); ?></h2>
-            </div>
+            </div><!--section-header-->
 
             <div class="row">
                 <?php 
@@ -156,28 +155,28 @@ get_header(); ?>
                         <div class="lastest-posts-img">
                             <?php the_post_thumbnail('img-service'); ?>
                             <span></span>
-                        </div>
+                        </div><!--lastest-posts-img-->
                         <div class="lastest-posts-info">
-                            <h3><?php echo _substr(get_the_title(), 80); ?></h3>
+                            <h2><?php echo _substr(get_the_title(), 80); ?></h2>
                             <p><?php echo _substr(get_the_excerpt(), 70); ?></p>
                             <a href="<?php the_permalink(); ?>">
                             <?php agilsun_multilanguae_static_text("View more detail","Xem chi tiết"); ?>
                             </a>
-                        </div>
+                        </div><!--/lastest-posts-info-->
                     </div>
-                </div>
+                </div><!--/col-sm-4 col-md-4-->
                 <?php
                     endwhile;
                     wp_reset_query();
                 ?>     
-            </div>
+            </div><!--/row-->
             <div class="view-all">
-            <a href="<?php bloginfo('url'); ?>/category/blog">
-                <?php agilsun_multilanguae_static_text("View all","Xem tất cả"); ?>
-            </a></div>
-        </div>
+                <a href="<?php bloginfo('url'); ?>/category/blog">
+                    <?php agilsun_multilanguae_static_text("View all","Xem tất cả"); ?>
+                </a>
+            </div><!--/view-all-->
+        </div><!--/container-->
     </section><!--/#lastest-posts-->
-
 
     <section id="contact">
         <?php echo get_field('google_map', 15); ?>
@@ -211,7 +210,7 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
-        </div>
+        </div><!--/container-wrapper-->
     </section><!--/#contact-->
 
 <?php get_footer(); ?>

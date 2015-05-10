@@ -1,9 +1,9 @@
-<footer id="footer">
+    <footer id="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-12 copy-right">
                     &copy; 2015 KIENDAT. All rights reserved.
-                </div>
+                </div><!--/copy-right-->
                 <div class="col-md-4 col-sm-12 menu-footer">
                     <ul>
                         <?php if(qtrans_getLanguage() == "vi") : ?>
@@ -21,18 +21,20 @@
                         <li class="scroll"><a href="#contact">Contact</a></li>  
                         <?php endif ?>
                     </ul>
-                </div>
+                </div><!--/ menu-footer-->
                 <div class="col-md-2 col-sm-12 menu">
                     <ul class="social-icons">
                         <li><a href="<?php echo get_field('facebook', 15); ?>"><i class="fa fa-twitter-square fa-3x"></i></a></li>
                         <li><a href="<?php echo get_field('twitter', 15); ?>"><i class="fa fa-facebook-square fa-3x"></i></a></li>
                     </ul>
-                </div>
-            </div>
-        </div>
+                </div><!--/menu-->
+            </div><!--/row-->
+        </div><!--/container-->
     </footer><!--/#footer-->
 
     <div id="go-to-top" style="display: block;"><i class="fa fa-angle-up"></i></div>
+    <!--/#go-to-top-->
+    
     <?php wp_footer(); ?>
     <script src="<?php bloginfo( 'template_url' ) ?>/js/jquery.js"></script>
     <script src="<?php bloginfo( 'template_url' ) ?>/js/bootstrap.min.js"></script>
