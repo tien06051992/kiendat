@@ -75,7 +75,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="<?php bloginfo('url'); ?>"><img src="images/logo.png" alt="logo"></a>
+                        <a class="navbar-brand" href="<?php bloginfo('url'); ?>"><h1 class="logo">logo></a>
                     </div><!--/navbar-header-->
                     
                     <!--menu-->
@@ -99,6 +99,6 @@
                     </div><!--/collapse-->
                 </div><!--/.container-->
             </div><!--/main-menu-->
-            
+
         </nav><!--/#main-menu-->
     </header><!--/header-->

@@ -65,5 +65,20 @@
                     </div>
                 </div><!--/container-->
             </div><!--/top-header-->
+
+            <div class="main-menu">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="<?php bloginfo('url'); ?>"><h1 class="logo">logo</h1></a>
+                    </div><!--/navbar-header-->
+                </div><!--/.container-->
+            </div><!--/main-menu-->
+            
         </nav><!--/#main-menu-->
     </header><!--/header-->

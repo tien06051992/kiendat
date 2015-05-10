@@ -12,7 +12,6 @@ Author URL: chaucdth10a@gmail.com
 
 body {
   font-family: 'Times New Roman', sans-serif;
-  padding-top: 15px;
 }
 h1,
 h2,
@@ -128,6 +127,13 @@ h6 {
 .language-bar ul li:first-child {
 	background: url('img/border-menu.png') no-repeat;
 	background-position: 100%;
+}
+
+.logo {
+	width: 169px;
+	height: 57px;
+	text-indent: -9999px;
+	background: url('img/logo.png') no-repeat;
 }
 /*----------------------------------------- cta ------------------------------------------*/
 
